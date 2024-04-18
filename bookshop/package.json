@@ -5,34 +5,20 @@
   "dependencies": {
     "@sap/cds": "^7.8.1",
     "@sap/cds-dk": "^7.8.1",
-    "@sap/xsenv": "^4",
-    "@sap/xssec": "^3",
     "cds-plugin-ui5": "^0.8.3",
-    "express": "^4",
-    "passport": "^0"
+    "express": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
-    "@sap/ux-specification": "^1.120.8",
-    "mbt": "^1"
+    "@sap/ux-specification": "^1.120.8"
   },
   "scripts": {
     "start": "cds run",
-    "dev": "cds watch",
-    "build": "mbt build",
-    "watch-bookshop": "cds watch --open bookshop/webapp/index.html?sap-ui-xx-viewCache=false",
-    "watch-bookshop-ui": "cds watch --open bookshop-ui/webapp/index.html?sap-ui-xx-viewCache=false"
+    "dev": "cds watch"
   },
   "cds": {
     "db": {
       "kind": "sql"
     }
-  },
-  "sapux": [
-    "app/bookshop",
-    "app/bookshop-ui",
-    "app/bookshop-ui",
-    "app/bookshop-ui",
-    "app/bookshop-ui"
-  ]
+  }
 }
