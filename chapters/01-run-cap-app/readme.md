@@ -23,7 +23,7 @@ A little bit about the structure of our bookshop service (and SAP CAP applicatio
 - The [package.json](/bookshop/package.json) declares the Node.js application's dependencies and other metadata. This file is not specific to SAP CAP - all Node.js based applications need a `package.json`.
 - The [db/](/bookshop/db/) directory represents the database layer of the backend, defining all entities (think "tables") as well as the association between them.
 - The [srv/](/bookshop/srv/) directory represents the service layer of the backend, which is the API our frontend application will be interacting with.
-- The [app/](/bookshop/app/) directory is empty as of now. This is typically where frontend applications reside. We will create our Fiori elements application in this directory as well.
+- The [app/](/bookshop/app/) directory is empty (or non-existing) as of now. This is typically where frontend applications reside. We will create our Fiori elements application in this directory as well.
 
 ## 2. Install the project dependencies
 
