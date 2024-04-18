@@ -115,11 +115,21 @@ You can read more about OData operations (including action bindings) in the [off
 
 ## 4. Test the order feature
 
-➡️ (Re)visit the URL of the SAP CAP server and refresh the page. Click "Go", then click one of the books in the table to navigate to its object page and try to order some books:
+> **Important Note** ⚠️⚠️
+>
+> Due to the caching behavior of SAP Fiori elements applications, you might not always see the latest changes made to your XML code reflected in the browser. SAP Fiori elements caches XML views and fragments for performance reasons, which is not particularly helpful at design time. Whenever you feel like your application is not executing your latest code, follow these instructions (for Chromium based browsers):
+>
+> 1. Open the developer console of you browser.
+> 2. Go to the "Application" tab.
+> 3. In the menu, select "Application > Storage".
+> 4. Click "Clear site data".
+> 5. Refresh the page.
+
+➡️  Read the above note and follow its instructions. Then (re)visit the URL of the SAP CAP server and refresh the page. Click "Go", then click one of the books in the table to navigate to its object page and try to order some books:
 
 ![object page](object-page.png)
 
-You should see a success message and the stock of the ordered book decrease. Feel free to play around with the feature and test its limits by enducing an error. You could for example manually enter a quantity higher than the stock and press "Order". Also feel free to inspect the terminal that runs your SAP CAP server to see how the backend handles the requests.
+Granted you have read and followed the instructions in the note, you should see a success message and the stock of the ordered book decrease. Feel free to play around with the feature and test its limits by enducing an error. You could for example manually enter a quantity higher than the stock and press "Order". Also feel free to inspect the terminal that runs your SAP CAP server to see how the backend handles the requests.
 
 ## 5. Further questions to discuss
 
