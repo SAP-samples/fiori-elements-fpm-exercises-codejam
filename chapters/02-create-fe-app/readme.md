@@ -13,7 +13,7 @@ By the end of this chapter we will have created an SAP Fiori elements applicatio
 
 ## 1. Launch the SAP Fiori Tools Application Generator
 
-The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.sap-ux-fiori-tools-extension-pack) is an extension pack for Visual Studio Code that bundles extensions that help with SAP Fiori development. We will use it extensively during this SAP CodeJam - starting with the creation of an SAP Fiori elements application.
+The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.sap-ux-fiori-tools-extension-pack) is an extension pack for Visual Studio Code that bundles extensions that help with SAP Fiori development. We will use it extensively during this SAP CodeJam - starting with the creation of an SAP Fiori elements application. If you have not installed the SAP Fiori Tools yet, go back and work through [chapter 0](/chapters/00-prep-dev-environment/).
 
 ➡️ Open the command palette (Command/Ctrl + Shift + P), search for "Application Generator", and launch the SAP Fiori Tools Application Generator:
 
@@ -21,7 +21,7 @@ The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.
 
 ## 2. Create an SAP Fiori elements application
 
-➡️ Create an application using the following settings and properties for the Template Wizard:
+➡️ Create an application using the following settings and properties for the template wizard:
 
 |||
 | - | - |
@@ -48,7 +48,7 @@ We created a new SAP Fiori elements application that consumes the bookshop backe
 
 ➡️ Open the `app/bookshop-ui/` directory and inspect its contents.
 
-If you are familiar with UI5, you will recognize this project structure immediately (if you are not, I suggest checking out this repository: [ui5-exercise-codejam](https://github.com/SAP-Samples/ui5-exercises-codejam)):
+If you are familiar with UI5, you will recognize this project structure immediately (if you are not, check out this repository: [ui5-exercise-codejam](https://github.com/SAP-Samples/ui5-exercises-codejam)):
 - The `webapp/` directory contains the actual web application - most importantly the `Component.js`, `index.html`, and `manifest.json`.
 - The `app/bookshop-ui/` directory also contains its own `package.json`, which means it is a Node.js based application. It's a common practice to have nested Node.js applications during design time.
 - The `app/bookshop-ui/` directory also contains a `ui5.yaml`, which allows us to configure the [UI5 Tooling](https://www.npmjs.com/package/@ui5/cli).
@@ -85,7 +85,7 @@ We created a fully functional SAP Fiori elements application. Feel free to play 
 
 ➡️ If you happen to finish this chapter early, think about the following questions (that we will discuss later):
 
-- Why was there no option in the Template Wizard to use OpenUI5 instead of SAPUI5?
+- Why was there no option in the template wizard to use OpenUI5 instead of SAPUI5?
 - How does the SAP CAP server know it should serve the newly created SAP Fiori elements application?
 - What is the benefit of using the [`cds-plugin-ui5`](https://www.npmjs.com/package/cds-plugin-ui5)?
 

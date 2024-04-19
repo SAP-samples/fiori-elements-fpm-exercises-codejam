@@ -1,6 +1,6 @@
 # Chapter 00 - Preparing the development environment
 
-By the end of this chapter we will have prepared our development environment so that we can start developing our bookshop app.
+By the end of this chapter we will have prepared our development environment so that we can start developing our application.
 
 ## Steps
 

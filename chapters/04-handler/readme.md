@@ -16,7 +16,7 @@ Before we implement the order feature, we want to make sure we really understand
 
 ➡️ Open the `app/bookshop-ui/webapp/ext/fragment/Order.fragment.xml` file and inspect its content.
 
-The XML fragment consists of a simple vertical box (`<VBox />`) and a button (`<Button />`). The button requires the JavaScript handler directly (via `core:require`), which is an interesting difference compared to how XML views usually load their JavaScript counterparts - namely controllers. With XML views, controllers are usually linked via the `controllerName` attribute. XML fragment don't allow for this attribute, plus we don't even have a controller instance (yet). Inspect the `app/bookshop-ui/webapp/ext/fragment/Order.js` file to see that this simple module does not extend any controller. All it does is return a simple `onPress` method.
+The XML fragment consists of a simple vertical box (`<VBox />`) and a button (`<Button />`). The button requires the JavaScript handler very explicitly (via `core:require`), which is an interesting difference compared to how XML views usually load their JavaScript counterparts - namely controllers. With XML views, controllers are usually linked via the `controllerName` attribute. XML fragments don't allow for this attribute, plus we don't even have a controller instance (yet). Inspect the `app/bookshop-ui/webapp/ext/fragment/Order.js` file to see that this simple module does not extend any controller. All it does is return a simple `onPress` method.
 
 You can read more about requiring modules (not controllers) in the [official UI5 documentation](https://ui5.sap.com/#/topic/b11d853a8e784db6b2d210ef57b0f7d7).
 
@@ -115,7 +115,7 @@ You can read more about OData operations (including action bindings) in the [off
 
 ## 4. Test the order feature
 
-> **Important Note** ⚠️⚠️
+> **Important Note** ⚠️
 >
 > Due to the caching behavior of SAP Fiori elements applications, you might not always see the latest changes made to your XML code reflected in the browser. SAP Fiori elements caches XML views and fragments for performance reasons, which is not particularly helpful at design time. Whenever you feel like your application is not executing your latest code, follow these instructions (for Chromium based browsers):
 >

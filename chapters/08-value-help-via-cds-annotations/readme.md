@@ -68,7 +68,7 @@ The SAP Cloud Application Programming Model comes with built in support for draf
 annotate CatalogService.Books with @odata.draft.enabled;
 ```
 
-We enabled draft support for the `Books` entity, which allows us to create new and edit existing books.
+We enabled draft support for the `Books` entity, which allows us to create new books and edit existing ones.
 
 ## 4. Test value help on object page
 
@@ -103,7 +103,7 @@ The error suggests that it is trying to find a key at `author/name` (as part of 
 },
 ```
 
-We modified the annotations so that the "General Information" field group now displays the `author_ID` and `genre_ID` instead of `author.name` and `genre.name`. While this fixes the value help (feel free to try it out), we now have another problem: the object page of course now displays the `ID`s instead of `name`s, which is not very user friendly. Time to tackle this issue as well.
+We modified the annotations so that the "General Information" field group now displays the `author_ID` and `genre_ID` instead of `author.name` and `genre.name`. While this fixes the value help (feel free to try it out), we now have a new problem: the object page of course now displays the `ID`s instead of `name`s, which is not very user friendly. Time to tackle this issue as well.
 
 ## 6. Add CDS annotations to display `name` instead of `ID`
 
@@ -120,11 +120,11 @@ annotate CatalogService.Books with {
 }
 ```
 
-We modified the CDS annotations containing the titles for the fields of the `Books` entity. We added details about the text that should be displayed for that field, namely the `author.name` for authors and `genre.name` for genres.   
+We modified the CDS annotations containing the titles for the fields of the `Books` entity. We added details about the text that should be displayed for certain fields, namely the `author.name` for authors and `genre.name` for genres.   
 
 ## 7. Test value help on object page (again)
 
-➡️ (Re)visit the URL of the SAP CAP server and refresh the page. On the list report page, click "Create" and test the value help. You should see the `name`s for author and genre (instead of `ID`s) and you should be able to create the book:
+➡️ (Re)visit the URL of the SAP CAP server and refresh the page. On the list report page, click "Create" and test the value help on the object page. You should see the `name`s for author and genre (instead of `ID`s) and you should be able to create the book:
 
 ![app](app.png)
 
@@ -133,6 +133,6 @@ We modified the CDS annotations containing the titles for the fields of the `Boo
 ➡️ If you happen to finish this chapter early, think about the following questions (that we will discuss later):
 
 - In step 6 we added annotations that make sure the `name`s are displayed for the author and genre. We did something similar in step 1 as well - what is the difference?
-- How do you personally like the experience using annotations so far? (There is no right or wrong to this question.)
+- How do you personally like the experience using annotations so far? (There is no right or wrong answer to this question.)
 
 Continue to [Chapter 09 - Adding a header section via CDS annotations](/chapters/09-header-section-via-cds-annotations/)

@@ -14,7 +14,7 @@ By the end of this chapter, we will have created a custom section in the SAP Fio
 
 ## 1. Launch the SAP Fiori Tools Page Map
 
-For this chapter we use another one of the extension that comes with the SAP Fiori Tools: the Page Map. The Page Map allows us to edit and visualize the pages of our application as well as their navigation flow.
+For this chapter we use another one of the extension of the SAP Fiori Tools: the Page Map. The Page Map allows us to edit and visualize the pages of our application as well as their navigation flow.
 
 ➡️ Open the command palette (Command/Ctrl + Shift + P), search for "Page Map", and launch the SAP Fiori Tools Page Map:
 
@@ -28,7 +28,7 @@ For this chapter we use another one of the extension that comes with the SAP Fio
 
 ## 3. Create a new custom section
 
-➡️ Click the plus icon in the "Sections" area of the Page Map to create new custom section:
+➡️ Click the plus icon in the "Sections" area of the Page Map to create a new custom section:
 
 ![Page Map 2](page-map2.png)
 
@@ -44,7 +44,7 @@ We have created a new custom section using one of the available [extension point
 
 ➡️ Inspect the `app/bookshop-ui/webapp/ext/fragment` directory and its contents.
 
-The SAP Fiori Tools generated this new directory that includes an XML fragment as well as the corresponding JavaScript handler. These files allow for custom coding of any sort. The custom section is loaded into the application via the `manifest.json`, where its metadata like path, position, and title is maintained. Take a moment to stare at this code, which is part of the `manifest.json`:
+The SAP Fiori Tools generated this new directory that includes an XML fragment as well as the corresponding JavaScript handler. These files allow for custom coding of any sort. The custom section is loaded into the application via the `manifest.json`, where its metadata (like path, position, and title) is maintained. Take a moment to stare at this code, which is part of the `manifest.json`:
 
 ```json
 "BooksObjectPage": {
@@ -89,6 +89,7 @@ The SAP Fiori Tools generated this new directory that includes an XML fragment a
 ➡️ If you happen to finish this chapter early, think about the following questions (that we will discuss later):
 
 - What other common use-cases are there for XML fragments, apart from custom sections?
-- How do you personally like the experience using the SAP Fiori Tools so far? (There is no right or wrong to this question.)
+- What is a `manifest.json`? Is this file specific to UI5?
+- How do you personally like the experience using the SAP Fiori Tools so far? (There is no right or wrong answer to this question.)
 
 Continue to [Chapter 04 - Using a JavaScript handler](/chapters/04-handler/)
