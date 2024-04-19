@@ -4,6 +4,6 @@ This chapter is still work in progress 🚧
 
 For now, you can read about building blocks in the [flexible programming model explorer](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/buildingBlockOverview).
 
-Also, we do take pull requests 😋
+Also, we do accept pull requests 😋
 
 Continue to [Chapter 07 - Adding formatting via CDS annotations](/chapters/07-formatting-via-cds-annotations/)
