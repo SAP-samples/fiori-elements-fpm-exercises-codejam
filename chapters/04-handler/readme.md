@@ -74,8 +74,7 @@ sap.ui.define([
             const selectedBookID = oContext.getProperty("ID")
             const selectedQuantity = this.byId("stepInput").getValue()
 
-            const oAction = oModel.bindContext("/submitOrder(...)")
-            oAction.setParameter("book", selectedBookID)
+            const oAction = oModel.bindContext("CatalogService.submitOrder(...)", oContext);
             oAction.setParameter("quantity", selectedQuantity)
 
             oAction.execute().then(
