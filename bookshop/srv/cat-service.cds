@@ -7,6 +7,7 @@ service CatalogService {
                 stock : Integer
             };
         };
+
     entity Authors as projection on codejam.Authors;
 
 }
