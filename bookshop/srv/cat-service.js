@@ -4,8 +4,11 @@ module.exports = function() {
 	const { Books } = cds.entities('codejam')
 
 	// Reduce stock of ordered books if available stock suffices
-	this.on('submitOrder', async req => {
-		const { book, quantity } = req.data
+	this.on('submitOrder', 'Books', async (req) => {
+		// TODO: is there a better way to get ID of the book, on which the action was executed?
+		const book = req.query.SELECT.from.ref[0].where[2].val;
+
+		const { quantity } = req.data
 		if (quantity < 1) return req.reject(400, `quantity has to be 1 or more`)
 		let b = await SELECT`stock`.from(Books, book)
 		if (!b) return req.error(404, `Book #${book} doesn't exist`)
