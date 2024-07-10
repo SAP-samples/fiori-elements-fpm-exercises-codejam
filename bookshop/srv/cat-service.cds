@@ -1,10 +1,12 @@
 using {codejam} from '../db/schema';
 
 service CatalogService {
-    entity Books   as projection on codejam.Books;
+    entity Books   as projection on codejam.Books
+        actions {
+            action submitOrder(quantity : Integer) returns {
+                stock : Integer
+            };
+        };
     entity Authors as projection on codejam.Authors;
 
-    action submitOrder(book : Books:ID, quantity : Integer) returns {
-        stock : Integer
-    };
 }
