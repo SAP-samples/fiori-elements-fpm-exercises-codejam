@@ -17,6 +17,8 @@ entity Books : managed, cuid {
     price       : Decimal               @(Measures.ISOCurrency: currency_code)  @mandatory;
     currency    : Currency;
     image       : LargeBinary           @Core.MediaType: 'image/png';
+    sales       : Association to many Sales
+                      on sales.book = $self;
 }
 
 entity Authors : managed {
@@ -28,6 +30,13 @@ entity Authors : managed {
         placeOfDeath : String;
         books        : Association to many Books
                            on books.author = $self;
+}
+
+entity Sales : managed, cuid {
+    book     : Association to one Books;
+    month    : String @(title: 'Month');
+    price    : Decimal                  @(Measures.ISOCurrency: currency_code)  @mandatory;
+    currency : Currency;
 }
 
 entity Genres : sap.common.CodeList {
