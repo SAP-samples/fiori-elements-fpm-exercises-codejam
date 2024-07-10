@@ -95,5 +95,6 @@ We used the data binding syntax (more specifically [context binding](https://sap
 - Take a look at the controller extensions documentation in the [flexible programming model explorer](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview) - what other scenarios can you think of that could be implemented using controller extensions?
 - How could you call a method that is defined in a controller extension file from an XML fragment as part of a custom section? (So far we have only called a method that was part of JavaScript handler.)
 - We used expression binding to implement the order button's formatting - what other ways can you think of to achieve this?
+- In the expression binding, we used the `%`-syntax - what's the difference to the `$`-syntax that is also commonly used (hint: [SAPUI5 documentaion](https://sapui5.hana.ondemand.com/#/topic/daf6852a04b44d118963968a1239d2c0))?
 
 Continue to [Chapter 06 - Adding a building block](/chapters/06-building-block/)
