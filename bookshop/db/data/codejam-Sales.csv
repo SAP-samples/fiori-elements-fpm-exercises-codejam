@@ -1,4 +1,12 @@
-book_ID;month;price;currency_code
-fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;June 2024;11.11;GBP
-fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;July 2024;11.11;GBP
-fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;July 2024;11.11;GBP
+book_ID;dateTime;price;currency_code
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-07-11T06:49:45.420Z;11.11;GBP
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-06-11T06:49:45.420Z;11.11;GBP
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-06-11T08:49:45.420Z;11.11;GBP
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-05-15T10:15:30.123Z;11.11;GBP
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-05-15T12:15:30.123Z;11.11;GBP
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-04-20T14:25:50.987Z;11.11;GBP
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-04-20T16:25:50.987Z;11.11;GBP
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-03-10T18:35:40.456Z;11.11;GBP
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-03-10T20:35:40.456Z;11.11;GBP
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-02-25T22:45:55.789Z;11.11;GBP
+fc48cd34-ef71-4e6f-bc31-ccbea3eae2e2;2024-02-26T00:45:55.789Z;11.11;GBP

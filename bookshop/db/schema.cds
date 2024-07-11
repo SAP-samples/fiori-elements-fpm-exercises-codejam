@@ -34,8 +34,9 @@ entity Authors : managed {
 
 entity Sales : managed, cuid {
     book     : Association to one Books;
-    month    : String @(title: 'Month');
-    price    : Decimal                  @(Measures.ISOCurrency: currency_code)  @mandatory;
+    date     : Date @(title: 'Date');
+    dateTime : DateTime;
+    price    : Decimal  @(Measures.ISOCurrency: currency_code)  @mandatory;
     currency : Currency;
 }
 
