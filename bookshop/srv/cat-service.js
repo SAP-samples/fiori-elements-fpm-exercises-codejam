@@ -38,7 +38,9 @@ module.exports = function() {
 	this.before("READ", "Sales", async () => {
 		const sales = await SELECT(Sales)
 		for (const s of sales) {
-			await UPDATE(Sales, s.ID).with({ date: s.dateTime.split("T")[0] })
+			await UPDATE(Sales, s.ID).with({
+				date: s.dateTime.split("T")[0]
+			})
 		}
 	})
 
