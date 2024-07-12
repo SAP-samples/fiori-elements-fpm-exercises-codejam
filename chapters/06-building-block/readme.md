@@ -27,7 +27,7 @@ By the end of this chapter, we will have added a chart building block to the obj
 }
 ```
 
-This piece of code defines a new custom section in the form of an XML fragment. We will create this XML fragment in the next step. You might have noticed that it wasn't exactly easy to find the correct place to paste the code. Also, the syntax has to be very specific and it hard to remember. Therefore this sub-exercises really highlights the value the SAP Fiori Tools and specifically its Page Map bring.
+This piece of code defines a new custom section in the form of an XML fragment. We will create this XML fragment in the next step. You might have noticed that it wasn't exactly easy to find the correct place to paste the code. Also, the syntax has to be very specific and might be hard to remember. The points of this step was really to highlight the value the SAP Fiori Tools and specifically its Page Map offer.
 
 ## 2. Create a new XML fragment
 
@@ -49,7 +49,7 @@ This piece of code defines a new custom section in the form of an XML fragment. 
 </core:FragmentDefinition>
 ```
 
-The XML fragment makes use of the chart building block (also called "macros") from the `sap.fe.macros` library. It specifies the `contextPath` as a relative path (no leading `/`) to `sales`. That means, the chart get its data from the `sales` property of the currently bound context of the object page, which is a single book. The `metaPath` of the building block points to a set of annotations, which we will create next. 
+The XML fragment makes use of the chart building block (also called "macro") from the `sap.fe.macros` library. It specifies the `contextPath` as a relative path (no leading `/`) to `sales`. That means, the chart get its data from the `sales` property of the currently bound context of the object page, which is a single book. The `metaPath` of the building block points to a set of annotations, which we will create next. 
 
 ## 3. Add chart annotations
 
@@ -119,6 +119,7 @@ We added annotations for the `CatalogService.Sales` entity, for which we want to
 ➡️ If you happen to finish this chapter early, think about the following questions (that we will discuss later):
 
 - Which of the two ways of adding a custom section to an object page did you prefer? Using the SAP Fiori Tools Page Map or doing it manually? (There is no right or wrong to this answer.)
+- What other use cases for [building blocks](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/buildingBlockOverview) can you think of?
 - How could we enable other chart types to be selectable in the chart itself (hint: search [this XML code](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/chart/chartDefault) for the keyword "personalization")?
 
 Continue to [Chapter 07 - Adding formatting via CDS annotations](/chapters/07-formatting-via-cds-annotations/)
