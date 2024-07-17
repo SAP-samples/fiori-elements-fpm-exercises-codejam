@@ -5,7 +5,7 @@ module.exports = function() {
 
 	// reduce stock of ordered books if available stock suffices
 	this.on("submitOrder", "Books", async (req) => {
-		const book = req.params[0].ID
+		const book = req.params[0]
 		const { quantity } = req.data
 		if (quantity < 1) return req.reject(400, `quantity has to be 1 or more`)
 		let b = await SELECT.from(Books, book)
