@@ -113,6 +113,7 @@ We modified the annotations so that the "General Information" field group now di
 // general
 annotate CatalogService.Books with {
     title @title : 'Title';
+    descr @title : 'Description';
     author @title: 'Author' @Common: { Text: author.name, TextArrangement: #TextOnly };
     genre @title: 'Genre' @Common: { Text: genre.name, TextArrangement: #TextOnly };
     price @title: 'Price';
