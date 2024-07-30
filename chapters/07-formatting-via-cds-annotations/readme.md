@@ -25,6 +25,7 @@ using CatalogService as service from '../../srv/cat-service';
 // general
 annotate CatalogService.Books with {
     title @title : 'Title';
+    descr @title : 'Description';
     author @title: 'Author';
     genre @title: 'Genre';
     price @title: 'Price';
@@ -76,6 +77,55 @@ annotate CatalogService.Books with @(
             ![@UI.Criticality] : criticality // criticality for whole line item
       }
     }
+);
+
+annotate CatalogService.Sales with @(
+
+    UI.Chart                         : {
+        $Type              : 'UI.ChartDefinitionType',
+        ChartType          : #Line,
+        DynamicMeasures    : ['@Analytics.AggregatedProperty#sum'],
+        MeasureAttributes  : [{
+            $Type         : 'UI.ChartMeasureAttributeType',
+            DynamicMeasure: '@Analytics.AggregatedProperty#sum',
+            Role          : #Axis1
+        }],
+        Dimensions         : [date],
+        DimensionAttributes: [{
+            $Type    : 'UI.ChartDimensionAttributeType',
+            Dimension: date,
+            Role     : #Category
+        }]
+    },
+
+    Analytics.AggregatedProperty #sum: {
+        Name                : 'sumSales',
+        AggregationMethod   : 'sum',
+        AggregatableProperty: 'price',
+        ![@Common.Label]    : 'Sum Sales'
+    },
+
+    Aggregation.ApplySupported       : {
+        Transformations         : [
+            'aggregate',
+            'topcount',
+            'bottomcount',
+            'identity',
+            'concat',
+            'groupby',
+            'filter',
+            'top',
+            'skip',
+            'orderby',
+            'search'
+        ],
+        CustomAggregationMethods: ['Custom.concat'],
+        Rollup                  : #None,
+        PropertyRestrictions    : true,
+        GroupableProperties     : [date],
+        AggregatableProperties  : [{Property: price}]
+    }
+
 );
 ```
 

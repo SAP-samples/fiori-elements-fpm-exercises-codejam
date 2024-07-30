@@ -4,23 +4,19 @@ module.exports = function() {
 	const { Books, Sales } = cds.entities("codejam")
 
 	// reduce stock of ordered books if available stock suffices
-	this.on("submitOrder", "Books", async (req) => {
-		const book = req.params[0].ID
-		const { quantity } = req.data
+	this.on("submitOrder", "Books", async ({params:[book], data:{quantity}}) => {
 		if (quantity < 1) return req.reject(400, `quantity has to be 1 or more`)
-		let b = await SELECT.from(Books, book)
-		if (!b) return req.error(404, `Book #${book} doesn't exist`)
+		let b = await SELECT.from(Books, book.ID)
+		if (!b) return req.error(404, `Book #${book.ID} doesn't exist`)
 		let { stock, price, currency_code } = b
-		console.log(price, quantity, (price * quantity))
-		if (quantity > stock) return req.reject(409, `${quantity} exceeds stock for book #${book}`)
-		await UPDATE(Books, book).with({ stock: stock -= quantity })
+		if (quantity > stock) return req.reject(409, `${quantity} exceeds stock for book #${book.ID}`)
+		await UPDATE(Books, book.ID).with({ stock: stock -= quantity })
 		await INSERT.into(Sales).entries({
-			book_ID: book,
+			book_ID: book.ID,
 			dateTime: new Date().toISOString(),
 			price: price * quantity,
 			currency_code: currency_code
 		})
-		console.log(await SELECT(Sales).where({ book_ID: book }))
 		return { stock }
 	})
 
