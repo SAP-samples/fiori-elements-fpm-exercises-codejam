@@ -6,13 +6,14 @@ module.exports = function() {
 	// reduce stock of ordered books if available stock suffices
 	this.on("submitOrder", "Books", async ({params:[book], data:{quantity}}) => {
 		if (quantity < 1) return req.reject(400, `quantity has to be 1 or more`)
-		let b = await SELECT.from(Books, book.ID)
-		if (!b) return req.error(404, `Book #${book.ID} doesn't exist`)
+		console.log(book)
+		let b = await SELECT.from(Books, book)
+		if (!b) return req.error(404, `Book #${book} doesn't exist`)
 		let { stock, price, currency_code } = b
-		if (quantity > stock) return req.reject(409, `${quantity} exceeds stock for book #${book.ID}`)
-		await UPDATE(Books, book.ID).with({ stock: stock -= quantity })
+		if (quantity > stock) return req.reject(409, `${quantity} exceeds stock for book #${book}`)
+		await UPDATE(Books, book).with({ stock: stock -= quantity })
 		await INSERT.into(Sales).entries({
-			book_ID: book.ID,
+			book_ID: book,
 			dateTime: new Date().toISOString(),
 			price: price * quantity,
 			currency_code: currency_code
