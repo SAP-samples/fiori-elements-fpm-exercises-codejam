@@ -167,6 +167,5 @@ Annotations generally can become quite complex and files can get very large, whi
 
 - In the screen shot in step 5 you can see the Flexible Column Layout in action. How can this be applied to the application using the SAP Fiori Tools? 
 - How does SAP Fiori elements know how to color code the `stock` column in the list report? Where are the threshold values defined?
-- Inspect the "General Information" field group on the object page closely and try to find the missing piece. How could we add this missing piece? 
 
 Continue to [Chapter 08 - Adding value help via CDS annotations](/chapters/08-value-help-via-cds-annotations)
