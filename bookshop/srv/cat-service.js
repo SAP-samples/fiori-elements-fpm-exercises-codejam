@@ -13,7 +13,6 @@ module.exports = function() {
 		let { stock, price, currency_code } = b
 		if (quantity > stock) return req.reject(409, `${quantity} exceeds stock for book #${book}`)
 		await UPDATE(Books, book).with({ stock: stock -= quantity })
-		console.log("BOoooooook", book)
 		await INSERT.into(Sales).entries({
 			book_ID: book,
 			dateTime: new Date().toISOString(),

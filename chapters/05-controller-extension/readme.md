@@ -4,8 +4,8 @@ By the end of this chapter, we will have implemented a controller extension that
 
 ## Steps
 
-- [1. Add the controller file](1#-add-the-controller-file)<br>
-- [2. Register the controller file](2#-register-the-controller-file)<br>
+- [1. Add the controller file](#1-add-the-controller-file)<br>
+- [2. Register the controller file](#2-register-the-controller-file)<br>
 - [3. Consume new data model in XML fragment](#3-consume-new-data-model-in-xml-fragment)<br>
 - [4. Test new controller extension](#4-test-new-controller-extension)<br>
 - [5. Further questions to discuss](#5-further-questions-to-discuss)<br>
