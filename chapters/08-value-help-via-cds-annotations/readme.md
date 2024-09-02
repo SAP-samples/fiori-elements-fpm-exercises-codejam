@@ -113,6 +113,7 @@ We modified the annotations so that the "General Information" field group now di
 // general
 annotate CatalogService.Books with {
     title @title : 'Title';
+    descr  @title: 'Description';
     author @title: 'Author' @Common: { Text: author.name, TextArrangement: #TextOnly };
     genre @title: 'Genre' @Common: { Text: genre.name, TextArrangement: #TextOnly };
     price @title: 'Price';
@@ -132,7 +133,7 @@ We modified the CDS annotations containing the titles for the fields of the `Boo
 
 ➡️ If you happen to finish this chapter early, think about the following questions (that we will discuss later):
 
-- In step 6 we added annotations that make sure the `name`s are displayed for the author and genre. We did something similar in step 1 as well - what is the difference?
+- In step 6 we added annotations that make sure the `name`s are displayed for the author and genre on the list report page. We did something similar in step 1 as well - what is the difference?
 - How do you personally like the experience using annotations so far? (There is no right or wrong answer to this question.)
 
 Continue to [Chapter 09 - Adding a header section via CDS annotations](/chapters/09-header-section-via-cds-annotations/)

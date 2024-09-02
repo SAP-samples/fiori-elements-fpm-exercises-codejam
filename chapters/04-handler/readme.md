@@ -106,8 +106,7 @@ sap.ui.define([
 ```
 
 We implemented the `.onSubmitOrder` method in our JavaScript handler. The method gets the bound context and data model from the element that was pressed and binds an OData action to that model. This `submitOrder` action was implemented as part of the OData backend service using SAP CAP - see [here](/bookshop/srv/cat-service.js).
-After the action has been executed, the method either displays a success `MessageToast` and refreshs the data model, or it displays a `Dialog` with the error message.
-).
+After the action has been executed, the method either displays a success `MessageToast` and refreshes the data model, or it displays a `Dialog` with the error message.
 
 You can read more about OData operations (including action bindings) in the [offical UI5 documentation](https://sapui5.hana.ondemand.com/sdk/#/topic/b54f7895b7594c61a83fa7257fa9d13f).
 

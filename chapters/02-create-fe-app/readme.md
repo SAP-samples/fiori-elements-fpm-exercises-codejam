@@ -37,7 +37,7 @@ The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.
 | Application title | Bookshop |
 | Application namespace | *leave empty* |
 | Description | A simple bookshop application. |
-| Minimum SAPUI5 version | *choose latest* |
+| Minimum SAPUI5 version | *choose latest patch of version **1.120*** |
 | Add deployment configuration to MTA project | No |
 | Add FLP configuration | No |
 | Configure advanced options | No

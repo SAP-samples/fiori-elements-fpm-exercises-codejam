@@ -13,7 +13,7 @@ By the end of this chapter, we will have added new formatting to our application
 
 ## 1. Add CDS annotations for the list report page
 
-So far we have focused on the "flexible" part of the SAP Fiori elements programming model by developing a custom section and a controller extension. Now it's time to focus on the "SAP Fiori elements" part and its metadata-driven approach. With this approach, metadata about the backend OData service is interpreted by SAP Fiori elements, as this metadata contains annotations (think "instructions") on how to display its data in a user interface. Annotations can be maintained as part of the backend or be added as part of the SAP Fiori elements application, which is what we will do here.
+So far we have focused on the "flexible" part of the SAP Fiori elements programming model by developing custom sections and a controller extension. Now it's time to focus on the "SAP Fiori elements" part and its metadata-driven approach. With this approach, metadata about the backend OData service is interpreted by SAP Fiori elements, as this metadata contains annotations (think "instructions") on how to display its data in a user interface. Annotations can be maintained as part of the backend or be added as part of the SAP Fiori elements application, which is what we will do here.
 
 Interestingly, there are already some annotations in the `app/bookshop-ui/annotations.cds` file, which where added semi-automatically (we said "yes" to that) by the SAP Fiori Tools Application Generator (see [chapter 2](/chapters/02-create-fe-app/)). For the sake of learning however, we will delete these annotations now and rebuild them step by step, so we understand how they work.
 
@@ -167,6 +167,5 @@ Annotations generally can become quite complex and files can get very large, whi
 
 - In the screen shot in step 5 you can see the Flexible Column Layout in action. How can this be applied to the application using the SAP Fiori Tools? 
 - How does SAP Fiori elements know how to color code the `stock` column in the list report? Where are the threshold values defined?
-- Inspect the "General Information" field group on the object page closely and try to find the missing piece. How could we add this missing piece? 
 
 Continue to [Chapter 08 - Adding value help via CDS annotations](/chapters/08-value-help-via-cds-annotations)
