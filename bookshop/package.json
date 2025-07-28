@@ -3,10 +3,10 @@
 	"version": "1.0.0",
 	"description": "A simple self-contained bookshop service.",
 	"dependencies": {
-		"@sap/cds": "^7.8.1"
+		"@sap/cds": "^8"
 	},
 	"devDependencies": {
-		"@sap/cds-dk": "^7.8.1",
+		"@sap/cds-dk": "^8",
 		"@cap-js/sqlite": "^1",
 		"@sap/ux-specification": "^1.120.8",
 		"cds-plugin-ui5": "^0.8.3"
