@@ -1,9 +1,0 @@
-<core:FragmentDefinition xmlns:richtexteditor="sap.fe.macros.richtexteditor" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros" >
-	<VBox id="idVBoxBookDescriptionSection">
-		<macros:RichTextEditor id="idRTEDescription" value="{descr}"  >
-			<macros:buttonGroups>
-				<richtexteditor:ButtonGroup id="idRTEDescriptionButtonGroup" name="font-style" visible="true" priority="10" buttons="bold,italic,underline"></richtexteditor:ButtonGroup>
-			</macros:buttonGroups>
-		</macros:RichTextEditor>
-	</VBox>
-</core:FragmentDefinition>

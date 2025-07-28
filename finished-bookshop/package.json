@@ -13,8 +13,7 @@
   },
   "scripts": {
     "start": "cds run",
-    "dev": "cds watch",
-    "watch-bookshop-ui": "cds watch --open bookshop-ui/webapp/index.html?sap-ui-xx-viewCache=false"
+    "dev": "cds watch"
   },
   "cds": {
     "db": {
@@ -22,7 +21,5 @@
     }
   },
   "sapux": [
-    "app/bookshop-ui",
-    "app/bookshop-ui"
   ]
 }

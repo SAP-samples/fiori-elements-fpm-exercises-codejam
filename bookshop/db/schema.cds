@@ -14,7 +14,6 @@ entity Books : managed, cuid {
     genre       : Association to one Genres;
     stock       : Integer               @mandatory;
     criticality : Integer;
-    stockStatus   :Association to StockStatus on stockStatus.criticality = criticality;
     price       : Decimal               @(Measures.ISOCurrency: currency_code)  @mandatory;
     currency    : Currency;
     image       : LargeBinary           @Core.MediaType: 'image/png';

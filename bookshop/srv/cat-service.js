@@ -1,7 +1,7 @@
 const cds = require("@sap/cds")
 
 module.exports = function() {
-	const { Books, Sales,StockStatus } = cds.entities("codejam")
+	const { Books, Sales } = cds.entities("codejam")
 
 	// reduce stock of ordered books if available stock suffices
 	this.on("submitOrder", "Books", async (req) => {
@@ -23,7 +23,7 @@ module.exports = function() {
 	})
 
 	this.after("each", "Books", async book =>  {
-		const stockStatus = await SELECT(StockStatus) || [];
+	
 		if (book.stock >= 20) {
 			book.criticality = 3 // Positive
 		} else if (book.stock > 0) {
@@ -31,7 +31,6 @@ module.exports = function() {
 		} else {
 			book.criticality = 1 // Negative
 		}
-		book.stockStatus = stockStatus.find(s => s.criticality === book.criticality)
 	})
 
 	// before handler to ensure aggregations can be calculated on db level

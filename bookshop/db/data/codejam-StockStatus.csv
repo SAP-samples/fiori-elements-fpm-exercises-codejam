@@ -1,4 +1,0 @@
-criticality,description,state
-3,In Stock,Success 
-2,Low Stock,Warning
-1,Out of Stock,Error
