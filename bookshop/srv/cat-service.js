@@ -22,8 +22,7 @@ module.exports = function() {
 		return { stock }
 	})
 
-	this.after("each", "Books", async book =>  {
-	
+	this.after("each", "Books", async book =>  {	
 		if (book.stock >= 20) {
 			book.criticality = 3 // Positive
 		} else if (book.stock > 0) {

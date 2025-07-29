@@ -21,13 +21,6 @@ entity Books : managed, cuid {
                       on sales.book = $self;
 }
 
-@cds.autoexpose
-entity StockStatus {
-    key criticality : Integer;
-        description : String(111);
-        state : String(111) @title: 'State';
-}
-
 entity Authors : managed {
     key ID           : Integer;
         name         : String(111);

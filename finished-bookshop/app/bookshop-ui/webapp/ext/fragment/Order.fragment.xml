@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros">
+
+	<HBox
+		id="hBox"
+		core:require="{ handler: 'bookshopui/ext/fragment/Order'}" >
+
+<StepInput 
+    id="stepInput"
+    min="1"
+    max="{stock}"
+    value="{userInput>/selectedQuantity}"
+    textAlign="Center"
+    validationMode="LiveChange" />
+
+<Button
+    id="orderButton"
+    text="Order"
+    press="handler.onSubmitOrder"
+    enabled="{= %{stock} >= %{userInput>/selectedQuantity} ? true : false }"
+    class="sapUiTinyMarginBegin" />
+
+	</HBox>
+
+</core:FragmentDefinition>

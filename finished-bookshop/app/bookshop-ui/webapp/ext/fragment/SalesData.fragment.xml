@@ -1,0 +1,13 @@
+<core:FragmentDefinition
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:macros="sap.fe.macros">
+
+	<macros:Chart
+		id="salesChart"
+		header="Sales Data"
+		headerVisible="true"
+		metaPath="@com.sap.vocabularies.UI.v1.Chart"
+		contextPath="sales" />
+
+</core:FragmentDefinition>
