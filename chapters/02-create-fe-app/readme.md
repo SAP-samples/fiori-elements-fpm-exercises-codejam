@@ -7,9 +7,10 @@ By the end of this chapter we will have created an SAP Fiori elements applicatio
 [1. Launch the SAP Fiori Tools Application Generator](#1-launch-the-sap-fiori-tools-application-generator)<br>
 [2. Create an SAP Fiori elements application](#2-create-an-sap-fiori-elements-application)<br>
 [3. Inspect the newly created application](#3-inspect-the-newly-created-application)<br>
-[4. Start the SAP CAP server](#4-start-the-sap-cap-server)<br>
-[5. Test the SAP Fiori elements application](#5-test-the-sap-fiori-elements-application)<br>
-[6. Further questions to discuss](#6-further-questions-to-discuss)<br>
+[4. Install dependencies](#4-install-dependencies)<br>
+[5. Start the SAP CAP server](#5-start-the-sap-cap-server)<br>
+[6. Test the SAP Fiori elements application](#6-test-the-sap-fiori-elements-application)<br>
+[7. Further questions to discuss](#7-further-questions-to-discuss)<br>
 
 ## 1. Launch the SAP Fiori Tools Application Generator
 
@@ -33,6 +34,7 @@ The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.
 | Main entity | Books |
 | Navigation entity | None |
 | Automatically add table columns to the list page and a section to the object page if none already exists? | Yes |
+| Table Type | Responsive |
 | Module name | bookshop-ui |
 | Application title | Bookshop |
 | Application namespace | *leave empty* |
@@ -48,7 +50,7 @@ We created a new SAP Fiori elements application that consumes the bookshop backe
 
 ➡️ Open the `app/bookshop-ui/` directory and inspect its contents.
 
-If you are familiar with UI5, you will recognize this project structure immediately (if you are not, check out this repository: [ui5-exercise-codejam](https://github.com/SAP-Samples/ui5-exercises-codejam)):
+If you are familiar with UI5, you will recognize this project structure immediately (if you are not, check out this repository: [ui5-exercises-codejam](https://github.com/SAP-Samples/ui5-exercises-codejam)):
 - The `webapp/` directory contains the actual web application - most importantly the `Component.js`, `index.html`, and `manifest.json`.
 - The `app/bookshop-ui/` directory also contains its own `package.json`, which means it is a Node.js based application. It's a common practice to have nested Node.js applications during design time.
 - The `app/bookshop-ui/` directory also contains a `ui5.yaml`, which allows us to configure the [UI5 Tooling](https://www.npmjs.com/package/@ui5/cli).
@@ -57,7 +59,16 @@ This project structure begs the question: What is the difference between a (free
 
 > An SAP Fiori elements application is a certain kind of UI5 application that uses a predefined [floorplan](https://ui5.sap.com/#/topic/797c3239b2a9491fa137e4998fd76aa7.html) (think "application layout") - following a metadata-driven approach. Technically speaking, an SAP Fiori elements application uses the `sap/fe/core/AppComponent` from the SAPUI5 library. This means every SAP Fiori elements application is a UI5 application, but not vice versa. The opposite of an SAP Fiori elements application is a freestyle UI5 application, which implements its own custom layout (views) and application logic (controllers). The situation is not exactly black and white, however, as the [SAP Fiori elements flexible programming model](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction) provides metadata-driven building blocks that can be used alongside freestyle UI5 coding. This set of exercises is dedicated to this powerful feature that combines the best of both worlds.
 
-## 4. Start the SAP CAP server
+## 4. Install dependencies
+
+➡️ Navigate into the directory of the newly created application and run the following command to install its dependencies:
+
+```bash
+cd app/bookshop-ui
+npm install
+```
+
+## 5. Start the SAP CAP server
 
 ➡️ (Re)start the SAP CAP server by running the following command from the `bookshop/` directory:
 
@@ -72,7 +83,7 @@ message, which indicates the SAP CAP server now also serves our frontend applica
 [cds-plugin-ui5] [info] Mounting /bookshopui to UI5 app ...
 ```
 
-## 5. Test the SAP Fiori elements application
+## 6. Test the SAP Fiori elements application
 
 ➡️ (Re)visit the URL of the SAP CAP server, refresh the page, and click on the link for the `/bookshopui/index.html` application:
 
@@ -81,7 +92,7 @@ message, which indicates the SAP CAP server now also serves our frontend applica
 
 We created a fully functional SAP Fiori elements application. Feel free to play around with the application - click "Go", then click one of the books in the table to navigate to its object page.
 
-## 6. Further questions to discuss
+## 7. Further questions to discuss
 
 ➡️ If you happen to finish this chapter early, think about the following questions (that we will discuss later):
 
