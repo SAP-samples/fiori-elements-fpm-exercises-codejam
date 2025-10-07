@@ -43,7 +43,7 @@ We created a new radial chart inside a new header section in our object page. Bu
 
 ## 5. Inspect generated CDS annotations
 
-➡️ Open the `app/bookshop-ui/annotations.cds` file and inspect the newly added code (most likely at the end of the file):
+➡️ Open the `app/bookshop-ui/annotations.cds` file and inspect the newly added code:
 
 ```cds
 annotate CatalogService.Books with @(
