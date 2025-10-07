@@ -92,4 +92,4 @@ The SAP Fiori Tools generated this new directory that includes an XML fragment a
 - What is a `manifest.json`? Is this file specific to UI5?
 - How do you personally like the experience using the SAP Fiori Tools so far? (There is no right or wrong answer to this question.)
 
-Continue to [Chapter 04 - Using a JavaScript handler](/chapters/04-handler/)
+Continue to [Chapter 04 - Using the JavaScript handler](/chapters/04-handler/)
