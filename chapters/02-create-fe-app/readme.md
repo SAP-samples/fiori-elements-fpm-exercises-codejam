@@ -74,12 +74,7 @@ npm install
 npm run dev
 ```
 
-We (re)started the SAP CAP server - just like in the previous chapter. There is one small difference to note though: The logs now include the following:f
-message, which indicates the SAP CAP server now also serves our frontend application with the help of the [`cds-plugin-ui5`](https://www.npmjs.com/package/cds-plugin-ui5):
-
-```text
-[cds-plugin-ui5] [info] Mounting /bookshopui to UI5 app ...
-```
+We (re)started the SAP CAP server - just like in the previous chapter. There is one small difference to note though: The logs now include messages which indicate the SAP CAP server now also serves our frontend application with the help of the [`cds-plugin-ui5`](https://www.npmjs.com/package/cds-plugin-ui5).
 
 ## 6. Test the SAP Fiori elements application
 
