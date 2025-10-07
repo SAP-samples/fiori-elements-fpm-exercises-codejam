@@ -17,7 +17,7 @@ So far we have focused on the "flexible" part of the SAP Fiori elements programm
 
 Interestingly, there are already some annotations in the `app/bookshop-ui/annotations.cds` file, which where added semi-automatically (we said "yes" to that) by the SAP Fiori Tools Application Generator (see [chapter 2](/chapters/02-create-fe-app/)). For the sake of learning however, we will delete these annotations now and rebuild them step by step, so we understand how they work.
 
-➡️ Replace the of `app/bookshop-ui/annotations.cds` file with the following code:
+➡️ Replace the contents of `app/bookshop-ui/annotations.cds` file with the following code:
 
 ```cds
 using CatalogService as service from '../../srv/cat-service';
