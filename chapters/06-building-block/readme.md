@@ -27,7 +27,7 @@ By the end of this chapter, we will have added a chart building block to the obj
 }
 ```
 
-This piece of code defines a new custom section in the form of an XML fragment. We will create this XML fragment in the next step. You might have noticed that it wasn't exactly easy to find the correct place to paste the code. Also, the syntax has to be very specific and might be hard to remember. The points of this step was really to highlight the value the SAP Fiori Tools and specifically its Page Map offer.
+This piece of code defines a new custom section in the form of an XML fragment. We will create this XML fragment in the next step. You might have noticed that it wasn't exactly easy to find the correct place to paste the code. Also, the syntax has to be very specific and might be hard to remember. The points of this step was really to highlight the value the SAP Fiori Tools and specifically its Page Map facility which offers a more visual way to define and maintain such customizations.
 
 ## 2. Create a new XML fragment
 

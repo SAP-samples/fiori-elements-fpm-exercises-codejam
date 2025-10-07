@@ -17,7 +17,7 @@ By the end of this chapter, we will have added value help to our application.
 
 Similar to how we used CDS annotations to add certain formatting to our application (see [previous chapter](/chapters/07-formatting-via-cds-annotations)), we can use CDS annotations to add value help to filters and selection fields.
 
-➡️ Add the following code to the `app/webapp/bookshop-ui/annotations.cds` file:
+➡️ Add the following code to the `app/bookshop-ui/annotations.cds` file:
 
 ```cds
 // value help for Authors

@@ -55,4 +55,6 @@ The SAP CAP server is now running and accessible via a URL:
 
 ![Raw data](data.png)
 
+> If your browser just displays the data in raw, unformatted fashion, you can install an extension. Using Google Chrome as an example, the [JSON Formatter](https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa) extension will work nicely.
+
 Continue to [Chapter 02 - Creating the SAP Fiori elements application](/chapters/02-create-fe-app/)

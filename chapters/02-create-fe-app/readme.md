@@ -14,7 +14,7 @@ By the end of this chapter we will have created an SAP Fiori elements applicatio
 
 ## 1. Launch the SAP Fiori Tools Application Generator
 
-The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.sap-ux-fiori-tools-extension-pack) is an extension pack for Visual Studio Code that bundles extensions that help with SAP Fiori development. We will use it extensively during this SAP CodeJam - starting with the creation of an SAP Fiori elements application. If you have not installed the SAP Fiori Tools yet, go back and work through [chapter 0](/chapters/00-prep-dev-environment/).
+The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.sap-ux-fiori-tools-extension-pack) is an extension pack for Visual Studio Code that bundles extensions that help with SAP Fiori development (if you opted to use the SAP Business Application Studio then this is already included in the `Full Stack Cloud Application` dev space type you selected). We will use it extensively during this SAP CodeJam - starting with the creation of an SAP Fiori elements application. If you have not installed the SAP Fiori Tools yet, go back and work through [chapter 0](/chapters/00-prep-dev-environment/).
 
 ➡️ Open the command palette (Command/Ctrl + Shift + P), search for "Application Generator", and launch the SAP Fiori Tools Application Generator:
 
@@ -22,11 +22,10 @@ The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.
 
 ## 2. Create an SAP Fiori elements application
 
-➡️ Create an application using the following settings and properties for the template wizard:
+➡️ Create an application using the following settings and properties for the SAP Fiori template wizard:
 
 |||
 | - | - |
-| Template Type | SAP Fiori |
 | Which template do you want to use? | List Report Page |
 | Data source | Use a Local CAP Project |
 | Choose your CAP project | bookshop |
@@ -40,9 +39,8 @@ The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.
 | Application namespace | *leave empty* |
 | Description | A simple bookshop application. |
 | Minimum SAPUI5 version | *choose latest patch of version **1.120*** |
-| Add deployment configuration to MTA project | No |
-| Add FLP configuration | No |
-| Configure advanced options | No
+
+Leave the rest of the radio button selections as they are.
 
 We created a new SAP Fiori elements application that consumes the bookshop backend service from our local SAP CAP application. We selected `Books` as the main entity. Let's now inspect this new application.
 
@@ -50,9 +48,9 @@ We created a new SAP Fiori elements application that consumes the bookshop backe
 
 ➡️ Open the `app/bookshop-ui/` directory and inspect its contents.
 
-If you are familiar with UI5, you will recognize this project structure immediately (if you are not, check out this repository: [ui5-exercises-codejam](https://github.com/SAP-Samples/ui5-exercises-codejam)):
+If you are familiar with UI5, you will recognize this project structure immediately (if you are not, check out this repository: [ui5-exercises-codejam](https://github.com/SAP-samples/ui5-exercises-codejam)):
 - The `webapp/` directory contains the actual web application - most importantly the `Component.js`, `index.html`, and `manifest.json`.
-- The `app/bookshop-ui/` directory also contains its own `package.json`, which means it is a Node.js based application. It's a common practice to have nested Node.js applications during design time.
+- The `app/bookshop-ui/` directory also contains its own `package.json`, which means it is a Node.js based application. It's a common practice to have nested Node.js applications during design time (observe the fact that there are only `devDependencies` in `package.json`, i.e. just for design / development time).
 - The `app/bookshop-ui/` directory also contains a `ui5.yaml`, which allows us to configure the [UI5 Tooling](https://www.npmjs.com/package/@ui5/cli).
 
 This project structure begs the question: What is the difference between a (freestyle) UI5 application and an SAP Fiori elements application?
@@ -76,12 +74,7 @@ npm install
 npm run dev
 ```
 
-We (re)started the SAP CAP server - just like in the previous chapter. There is one small difference to note though: The logs now include the following:f
-message, which indicates the SAP CAP server now also serves our frontend application with the help of the [`cds-plugin-ui5`](https://www.npmjs.com/package/cds-plugin-ui5):
-
-```text
-[cds-plugin-ui5] [info] Mounting /bookshopui to UI5 app ...
-```
+We (re)started the SAP CAP server - just like in the previous chapter. There is one small difference to note though: The logs now include messages which indicate the SAP CAP server now also serves our frontend application with the help of the [`cds-plugin-ui5`](https://www.npmjs.com/package/cds-plugin-ui5).
 
 ## 6. Test the SAP Fiori elements application
 
