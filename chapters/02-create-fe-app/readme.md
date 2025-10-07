@@ -22,11 +22,10 @@ The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.
 
 ## 2. Create an SAP Fiori elements application
 
-➡️ Create an application using the following settings and properties for the template wizard:
+➡️ Create an application using the following settings and properties for the SAP Fiori template wizard:
 
 |||
 | - | - |
-| Template Type | SAP Fiori |
 | Which template do you want to use? | List Report Page |
 | Data source | Use a Local CAP Project |
 | Choose your CAP project | bookshop |
