@@ -48,9 +48,9 @@ We created a new SAP Fiori elements application that consumes the bookshop backe
 
 ➡️ Open the `app/bookshop-ui/` directory and inspect its contents.
 
-If you are familiar with UI5, you will recognize this project structure immediately (if you are not, check out this repository: [ui5-exercises-codejam](https://github.com/SAP-Samples/ui5-exercises-codejam)):
+If you are familiar with UI5, you will recognize this project structure immediately (if you are not, check out this repository: [ui5-exercises-codejam](https://github.com/SAP-samples/ui5-exercises-codejam)):
 - The `webapp/` directory contains the actual web application - most importantly the `Component.js`, `index.html`, and `manifest.json`.
-- The `app/bookshop-ui/` directory also contains its own `package.json`, which means it is a Node.js based application. It's a common practice to have nested Node.js applications during design time.
+- The `app/bookshop-ui/` directory also contains its own `package.json`, which means it is a Node.js based application. It's a common practice to have nested Node.js applications during design time (observe the fact that there are only `devDependencies` in `package.json`, i.e. just for design / development time).
 - The `app/bookshop-ui/` directory also contains a `ui5.yaml`, which allows us to configure the [UI5 Tooling](https://www.npmjs.com/package/@ui5/cli).
 
 This project structure begs the question: What is the difference between a (freestyle) UI5 application and an SAP Fiori elements application?
