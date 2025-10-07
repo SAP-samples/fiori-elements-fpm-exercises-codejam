@@ -46,7 +46,7 @@ We created a new radial chart inside a new header section in our object page. Bu
 ➡️ Open the `app/bookshop-ui/annotations.cds` file and inspect the newly added code (most likely at the end of the file):
 
 ```cds
-annotate service.Books with @(
+annotate CatalogService.Books with @(
     UI.DataPoint #stock : {
         Value : stock,
         TargetValue : stock,
