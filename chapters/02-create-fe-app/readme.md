@@ -39,9 +39,8 @@ The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.
 | Application namespace | *leave empty* |
 | Description | A simple bookshop application. |
 | Minimum SAPUI5 version | *choose latest patch of version **1.120*** |
-| Add deployment configuration to MTA project | No |
-| Add FLP configuration | No |
-| Configure advanced options | No
+
+Leave the rest of the radio button selections as they are.
 
 We created a new SAP Fiori elements application that consumes the bookshop backend service from our local SAP CAP application. We selected `Books` as the main entity. Let's now inspect this new application.
 
