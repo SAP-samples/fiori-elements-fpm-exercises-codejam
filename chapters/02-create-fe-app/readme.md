@@ -14,7 +14,7 @@ By the end of this chapter we will have created an SAP Fiori elements applicatio
 
 ## 1. Launch the SAP Fiori Tools Application Generator
 
-The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.sap-ux-fiori-tools-extension-pack) is an extension pack for Visual Studio Code that bundles extensions that help with SAP Fiori development. We will use it extensively during this SAP CodeJam - starting with the creation of an SAP Fiori elements application. If you have not installed the SAP Fiori Tools yet, go back and work through [chapter 0](/chapters/00-prep-dev-environment/).
+The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.sap-ux-fiori-tools-extension-pack) is an extension pack for Visual Studio Code that bundles extensions that help with SAP Fiori development (if you opted to use the SAP Business Application Studio then this is already included in the `Full Stack Cloud Application` dev space type you selected). We will use it extensively during this SAP CodeJam - starting with the creation of an SAP Fiori elements application. If you have not installed the SAP Fiori Tools yet, go back and work through [chapter 0](/chapters/00-prep-dev-environment/).
 
 ➡️ Open the command palette (Command/Ctrl + Shift + P), search for "Application Generator", and launch the SAP Fiori Tools Application Generator:
 
