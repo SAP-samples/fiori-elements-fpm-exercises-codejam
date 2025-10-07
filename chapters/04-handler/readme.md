@@ -124,7 +124,7 @@ You can read more about OData operations (including action bindings) in the [off
 
 ![object page](object-page.png)
 
-Granted you have read and followed the instructions in the note, you should see a success message and the stock of the ordered book decrease. Feel free to play around with the feature and test its limits by enducing an error. You could for example manually enter a quantity higher than the stock and press "Order". Also feel free to inspect the terminal that runs your SAP CAP server to see how the backend handles the requests.
+Granted you have read and followed the instructions in the note, you should see a success message and the stock of the ordered book decrease. Feel free to play around with the feature and test its limits by inducing an error. You could for example manually enter a quantity higher than the stock and press "Order". Also feel free to inspect the terminal that runs your SAP CAP server to see how the backend handles the requests.
 
 ## 5. Further questions to discuss
 
