@@ -38,9 +38,11 @@ The [SAP Fiori Tools](https://marketplace.visualstudio.com/items?itemName=SAPSE.
 | Application title | Bookshop |
 | Application namespace | *leave empty* |
 | Description | A simple bookshop application. |
-| Minimum SAPUI5 version | *choose latest patch of version **1.120*** |
+| Minimum SAPUI5 version | *choose latest patch of version **1.120*** (see note below) |
 
 Leave the rest of the radio button selections as they are.
+
+> Make sure you choose the _latest_ patch version of SAPUI5, i.e. find the `1.120` versions in the list and choose the one with the highest last part (for example: 1.120.9 has a higher last part than 1.120.0).
 
 We created a new SAP Fiori elements application that consumes the bookshop backend service from our local SAP CAP application. We selected `Books` as the main entity. Let's now inspect this new application.
 
