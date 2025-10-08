@@ -129,7 +129,7 @@ annotate CatalogService.Sales with @(
 );
 ```
 
-We manually added three main blocks of annotations for the `Books` entity of the bookshop service to our SAP Fiori elements application. The first two of them are relevant for the list report page of the application. The first code block contains simple labels for the fields of the entity. The second block contains annotations relevant for the list report page. Let's go through them one by one to make sure we really understand them:
+We manually added three main blocks of annotations for the bookshop service to our SAP Fiori elements application. The first two of them are relevant for the list report page of the application. The first code block contains simple labels for the fields of the entity. The second block contains annotations relevant for the list report page. Let's go through them one by one to make sure we really understand them:
 - Using the [`UI` vocabulary](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/UI.md), we specify the filters (`UI.SelectionFields`) available on the list report page.
 - The `UI.HeaderInfo` describes exactly that - information displayed in the header.
 - The unique indentifier (`UI.Identification`) for the `Books` entity is the `ID`.
@@ -160,6 +160,8 @@ Annotations generally can become quite complex and files can get very large, whi
 ➡️ (Re)visit the URL of the SAP CAP server and refresh the page. Inspect the new formatting on the list report page as well as the object page:
 
 ![app](app.png)
+
+> Don't worry if your application's layout differs from what you see in this screen shot. The screen shot shows the application with the flexible column layout enabled. We will discuss this in a minute.
 
 ## 6. Further questions to discuss
 
