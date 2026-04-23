@@ -16,7 +16,7 @@ By the end of this chapter, we will have created a custom section in the SAP Fio
 
 For this chapter we use another one of the extension of the SAP Fiori Tools: the Page Map. The Page Map allows us to edit and visualize the pages of our application as well as their navigation flow.
 
-➡️ Open the command palette (Command/Ctrl + Shift + P), search for "Page Map", and launch the SAP Fiori Tools Page Map:
+➡️ Open the command palette (Command/Ctrl + Shift + P), search for "Page Map", and launch the SAP Fiori Tools Page Map (select the `bookshop` - not the `finished-bookshop` - app if prompted):
 
 ![command palette](command-palette.png)
 

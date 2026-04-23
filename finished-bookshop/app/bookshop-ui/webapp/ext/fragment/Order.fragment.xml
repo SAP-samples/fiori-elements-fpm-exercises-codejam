@@ -4,20 +4,20 @@
 		id="hBox"
 		core:require="{ handler: 'bookshopui/ext/fragment/Order'}" >
 
-<StepInput 
-    id="stepInput"
-    min="1"
-    max="{stock}"
-    value="{userInput>/selectedQuantity}"
-    textAlign="Center"
-    validationMode="LiveChange" />
+	<StepInput 
+		id="stepInput"
+		min="1"
+		max="{stock}"
+		value="{userInput>/selectedQuantity}"
+		textAlign="Center"
+		validationMode="LiveChange" />
 
-<Button
-    id="orderButton"
-    text="Order"
-    press="handler.onSubmitOrder"
-    enabled="{= %{stock} >= %{userInput>/selectedQuantity} ? true : false }"
-    class="sapUiTinyMarginBegin" />
+	<Button
+		id="orderButton"
+		text="Order"
+		press="handler.onSubmitOrder"
+		enabled="{= %{stock} >= %{userInput>/selectedQuantity} ? true : false }"
+		class="sapUiTinyMarginBegin" />
 
 	</HBox>
 

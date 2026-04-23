@@ -139,7 +139,7 @@ We manually added two main blocks of annotations for the bookshop service to our
 
 Annotations generally can become quite complex and files can get very large, which is why the SAP Fiori Tools can also help us with that aspect of SAP Fiori elements development. We will use the SAP Fiori Tools Guided Development to help us with the annotations for the object page.
 
-➡️ Open the Command Palette (Command/Ctrl + Shift + P), search for "Guided Development", and launch the SAP Fiori Tools Guided Development. In the Guided Development window, search for the "Add a field group to an object page" guide and enter it:
+➡️ Open the Command Palette (Command/Ctrl + Shift + P), search for "Guided Development", and launch the SAP Fiori Tools Guided Development (select the `bookshop` - not the `finished-bookshop` - app if prompted). In the Guided Development window, search for the "Add a field group to an object page" guide and enter it:
 
 ![Guided Development](guided-development.png)
  

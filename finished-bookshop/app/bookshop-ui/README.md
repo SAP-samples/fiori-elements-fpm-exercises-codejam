@@ -1,9 +1,9 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Tue Jul 29 2025 09:08:44 GMT+0200 (Central European Summer Time)|
+|**Generation Date and Time**<br>Thu Apr 23 2026 15:19:35 GMT+0200 (Central European Summer Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
-|**App Generator Version**<br>1.18.3|
+|**App Generator Version**<br>1.22.0|
 |**Generation Platform**<br>Visual Studio Code|
 |**Template Used**<br>List Report Page V4|
 |**Service Type**<br>Local CAP|
@@ -12,10 +12,9 @@
 |**Application Title**<br>Bookshop|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.120.34|
-|**Enable Code Assist Libraries**<br>False|
+|**UI5 Version**<br>1.136.17|
 |**Enable TypeScript**<br>False|
-|**Add Eslint configuration**<br>False|
+|**Add Eslint configuration**<br>True, see https://www.npmjs.com/package/@sap-ux/eslint-plugin-fiori-tools#rules for the eslint rules.|
 |**Main Entity**<br>Books|
 |**Navigation Entity**<br>None|
 

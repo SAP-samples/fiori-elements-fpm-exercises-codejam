@@ -64,20 +64,20 @@ Now that we have created the `userInput` data model during the `onInit` of the o
 ➡️ Replace the `<StepInput />` and `<Button />` inside the `app/bookshop-ui/webapp/ext/fragment/Order.fragment.xml` file with the following code:
 
 ```xml
-<StepInput 
-    id="stepInput"
-    min="1"
-    max="{stock}"
-    value="{userInput>/selectedQuantity}"
-    textAlign="Center"
-    validationMode="LiveChange" />
+    <StepInput 
+        id="stepInput"
+        min="1"
+        max="{stock}"
+        value="{userInput>/selectedQuantity}"
+        textAlign="Center"
+        validationMode="LiveChange" />
 
-<Button
-    id="orderButton"
-    text="Order"
-    press="handler.onSubmitOrder"
-    enabled="{= %{stock} >= %{userInput>/selectedQuantity} ? true : false }"
-    class="sapUiTinyMarginBegin" />
+    <Button
+        id="orderButton"
+        text="Order"
+        press="handler.onSubmitOrder"
+        enabled="{= %{stock} >= %{userInput>/selectedQuantity} ? true : false }"
+        class="sapUiTinyMarginBegin" />
 ```
 
 We used the data binding syntax (more specifically [context binding](https://sapui5.hana.ondemand.com/sdk/#/topic/91f05e8b6f4d1014b6dd926db0e91070)) to bind the `selectedQuantity` value of the `userInput` data model to the `<StepInput />`. Furthermore, we used [expression binding]() to enable and disable the `<Button />` based on whether this value is higher or lower than the available stock of the book. This is a good example of the power of data models and the [model-view-controller approach](https://sapui5.hana.ondemand.com/sdk/#/topic/91f233476f4d1014b6dd926db0e91070.html) in general. We can describe our application logic very declaratively, without having to worry about listening to value changes manually or updating the state of UI elements manually.

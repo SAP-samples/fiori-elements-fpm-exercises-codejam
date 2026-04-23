@@ -70,15 +70,15 @@ sap.ui.define([
             const oContext = oEvent.getSource().getBindingContext()
             const oModel = oContext.getModel()
 
-            const selectedBookTitle = oContext.getProperty("title")
-            const selectedQuantity = this.byId("stepInput").getValue()
+            const sSelectedBookTitle = oContext.getProperty("title")
+            const nSelectedQuantity = this.byId("stepInput").getValue()
 
             const oAction = oModel.bindContext("CatalogService.submitOrder(...)", oContext)
-            oAction.setParameter("quantity", selectedQuantity)
+            oAction.setParameter("quantity", nSelectedQuantity)
 
             oAction.execute().then(
                 function () {
-                    const sText = `Order successful (${selectedBookTitle}, ${selectedQuantity} pcs.)`
+                    const sText = `Order successful (${sSelectedBookTitle}, ${nSelectedQuantity} pcs.)`
                     MessageToast.show(sText)
                     this.refresh()
                 }.bind(this),

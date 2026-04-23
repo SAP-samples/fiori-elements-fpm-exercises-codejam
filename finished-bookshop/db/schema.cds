@@ -14,19 +14,11 @@ entity Books : managed, cuid {
     genre       : Association to one Genres;
     stock       : Integer               @mandatory;
     criticality : Integer;
-    stockStatus   :Association to StockStatus on stockStatus.criticality = criticality;
     price       : Decimal               @(Measures.ISOCurrency: currency_code)  @mandatory;
     currency    : Currency;
     image       : LargeBinary           @Core.MediaType: 'image/png';
     sales       : Association to many Sales
                       on sales.book = $self;
-}
-
-@cds.autoexpose
-entity StockStatus {
-    key criticality : Integer;
-        description : String(111);
-        state : String(111) @title: 'State';
 }
 
 entity Authors : managed {

@@ -1,5 +1,5 @@
 {
-  "_version": "1.60.0",
+  "_version": "1.73.1",
   "sap.app": {
     "id": "bookshopui",
     "type": "application",
@@ -12,8 +12,8 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
-      "version": "1.18.3",
-      "toolsId": "5bfbce7a-b2e8-49d4-b324-c8d33da86e41"
+      "version": "1.22.0",
+      "toolsId": "2c038d07-acef-44d7-a01f-a000a137cec8"
     },
     "dataSources": {
       "mainService": {
@@ -54,7 +54,7 @@
     },
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.120.34",
+      "minUI5Version": "1.136.17",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
@@ -191,5 +191,10 @@
   "sap.fiori": {
     "registrationIds": [],
     "archeType": "transactional"
+  },
+  "sap.fe": {
+    "app": {
+      "enableLazyLoading": true
+    }
   }
 }

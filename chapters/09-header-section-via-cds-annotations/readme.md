@@ -17,7 +17,7 @@ By the end of this chapter we will have added a micro chart header section to th
 
 For this chapter we use Fiori Tools Page Map and Guided Development again.
 
-➡️ Open the command palette (Command/Ctrl + Shift + P), search for "Page Map", and launch the SAP Fiori Tools Page Map:
+➡️ Open the command palette (Command/Ctrl + Shift + P), search for "Page Map", and launch the SAP Fiori Tools Page Map (select the `bookshop` - not the `finished-bookshop` - app if prompted):
 
 ![command palette](command-palette.png)
 
@@ -87,11 +87,11 @@ As already mentioned, the generated CDS annotations, more specifically the `UI.D
 ➡️ Replace the annotation for the `UI.DataPoint #stock` with the following code:
 
 ```cds
-UI.DataPoint #stock : {
-    Value : stock,
-    TargetValue : 100,
-    Criticality : criticality
-},
+    UI.DataPoint #stock : {
+        Value : stock,
+        TargetValue : 100,
+        Criticality : criticality
+    },
 ```
 
 We hard-coded a `TargetValue` of `100` for the data point and also added the `Criticality` annotation to add color coding to the donut chart. For that, we use the `criticality` field we have already used in previous chapters. 

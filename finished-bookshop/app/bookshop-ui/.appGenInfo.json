@@ -1,6 +1,6 @@
 {
   "generationParameters": {
-    "generationDate": "Tue Jul 29 2025 09:08:44 GMT+0200 (Central European Summer Time)",
+    "generationDate": "Thu Apr 23 2026 15:19:35 GMT+0200 (Central European Summer Time)",
     "generatorPlatform": "Visual Studio Code",
     "serviceType": "Local CAP",
     "metadataFilename": "",
@@ -10,12 +10,11 @@
     "appDescription": "A simple bookshop application.",
     "appNamespace": "",
     "ui5Theme": "sap_horizon",
-    "ui5Version": "1.120.34",
-    "enableCodeAssist": false,
-    "enableEslint": false,
+    "ui5Version": "1.136.17",
+    "enableEslint": true,
     "enableTypeScript": false,
     "showMockDataInfo": false,
-    "generatorVersion": "1.18.3",
+    "generatorVersion": "1.22.0",
     "template": "List Report Page V4",
     "generatorName": "SAP Fiori Application Generator",
     "entityRelatedConfig": [

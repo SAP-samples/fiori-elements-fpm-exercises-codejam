@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
 
-specVersion: "3.1"
+specVersion: "4.0"
 metadata:
   name: bookshopui
 type: application
@@ -9,7 +9,7 @@ server:
     - name: fiori-tools-proxy
       afterMiddleware: compression
       configuration:
-        ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        ignoreCertErrors: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
         ui5:
           path:
             - /resources
@@ -21,3 +21,8 @@ server:
         port: 35729
         path: webapp
         delay: 300
+    - name: fiori-tools-preview
+      afterMiddleware: fiori-tools-appreload
+      configuration:
+        flp:
+          theme: sap_horizon
